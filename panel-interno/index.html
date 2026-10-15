@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Panel interno</title></head>
+<body>
+  <h2>NovaTech - Acceso interno</h2>
+  <input id="u" placeholder="usuario">
+  <input id="p" type="password" placeholder="contraseña">
+  <button onclick="entrar()">Entrar</button>
+  <p id="msg"></p>
+
+  <script>
+    const clave = atob("R2hvc3QjNzc4MQ=="); // clave codificada
+    function entrar() {
+      if (u.value === "admin" && p.value === clave) {
+        msg.innerHTML = '<a href="x7/foto_equipo.jpg">Descargar foto del equipo</a>';
+      } else {
+        msg.textContent = "Acceso denegado";
+      }
+    }
+  </script>
+</body>
+</html>
